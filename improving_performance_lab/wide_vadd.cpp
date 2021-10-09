@@ -37,7 +37,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // Xilinx OpenCL and XRT includes
 #include "xilinx_ocl.hpp"
 
-void vadd_sw(float *a, float *b, float *c, uint32_t size)
+void vadd_sw(double *a, double *b, double *c, uint32_t size)
 {
     for (uint32_t i = 0; i < size; i++) {
         c[i] = a[i] + b[i];
@@ -87,24 +87,24 @@ int main(int argc, char *argv[])
     bank_ext.param = 0;
     cl::Buffer a_buf(xocl.get_context(),
                      static_cast<cl_mem_flags>(CL_MEM_READ_ONLY),
-                     BUFSIZE * sizeof(float),
+                     BUFSIZE * sizeof(double),
                      NULL,
                      NULL);
     cl::Buffer b_buf(xocl.get_context(),
                      static_cast<cl_mem_flags>(CL_MEM_READ_ONLY),
-                     BUFSIZE * sizeof(float),
+                     BUFSIZE * sizeof(double),
                      NULL,
                      NULL);
     cl::Buffer c_buf(xocl.get_context(),
                      static_cast<cl_mem_flags>(CL_MEM_READ_WRITE),
-                     BUFSIZE * sizeof(float),
+                     BUFSIZE * sizeof(double),
                      NULL,
                      NULL);
     cl::Buffer d_buf(xocl.get_context(),
                      static_cast<cl_mem_flags>(CL_MEM_READ_WRITE |
                                                CL_MEM_ALLOC_HOST_PTR |
                                                CL_MEM_EXT_PTR_XILINX),
-                     BUFSIZE * sizeof(float),
+                     BUFSIZE * sizeof(double),
                      &bank_ext,
                      NULL);
     et.finish();
@@ -120,21 +120,21 @@ int main(int argc, char *argv[])
     krnl.setArg(3, BUFSIZE);
 
     et.add("Map buffers to user space pointers");
-    float *a = (float *)q.enqueueMapBuffer(a_buf,
+    double *a = (double *)q.enqueueMapBuffer(a_buf,
                                                  CL_TRUE,
                                                  CL_MAP_WRITE,
                                                  0,
-                                                 BUFSIZE * sizeof(float));
-    float *b = (float *)q.enqueueMapBuffer(b_buf,
+                                                 BUFSIZE * sizeof(double));
+    double *b = (double *)q.enqueueMapBuffer(b_buf,
                                                  CL_TRUE,
                                                  CL_MAP_WRITE,
                                                  0,
-                                                 BUFSIZE * sizeof(float));
-    float *d = (float *)q.enqueueMapBuffer(d_buf,
+                                                 BUFSIZE * sizeof(double));
+    double *d = (double *)q.enqueueMapBuffer(d_buf,
                                                  CL_TRUE,
                                                  CL_MAP_WRITE | CL_MAP_READ,
                                                  0,
-                                                 BUFSIZE * sizeof(float));
+                                                 BUFSIZE * sizeof(double));
     et.finish();
 
     et.add("Populating buffer inputs");
@@ -163,11 +163,11 @@ int main(int argc, char *argv[])
 
     // Migrate memory back from device
     et.add("Read back computation results");
-    float *c = (float *)q.enqueueMapBuffer(c_buf,
+    double *c = (double *)q.enqueueMapBuffer(c_buf,
                                                  CL_TRUE,
                                                  CL_MAP_READ,
                                                  0,
-                                                 BUFSIZE * sizeof(float));
+                                                 BUFSIZE * sizeof(double));
     et.finish();
 
 
