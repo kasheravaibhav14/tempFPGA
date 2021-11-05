@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hwlink:HwLinkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hwlink="http://www.xilinx.com/acceleration/hwlink" name="convolution_system_hw_link" platform="/home/madhava/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm" systemProject="convolution_system" cpu="pl">
+  <configuration name="Emulation-SW" id="com.xilinx.ide.accel.config.hwlink.sw_emu.76343848">
+    <configBuildOptions xsi:type="hwlink:LinkOptions">
+      <binaryContainers name="binary_container_1">
+        <kernels name="Filter2DKernel" projectName="convolution_kernels">
+          <computeUnits name="Filter2DKernel_1" slr="">
+            <args name="coeffs" master="true" memory=""/>
+            <args name="factor"/>
+            <args name="bias"/>
+            <args name="width"/>
+            <args name="height"/>
+            <args name="stride"/>
+            <args name="src" master="true" memory=""/>
+            <args name="dst" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions">
+      <binaryContainers name="binary_container_1">
+        <kernels name="Filter2DKernel" projectName="convolution_kernels">
+          <computeUnits name="Filter2DKernel_1" slr="">
+            <args name="coeffs" master="true" memory=""/>
+            <args name="factor"/>
+            <args name="bias"/>
+            <args name="width"/>
+            <args name="height"/>
+            <args name="stride"/>
+            <args name="src" master="true" memory=""/>
+            <args name="dst" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.ide.accel.config.hwlink.hw_emu.50491065">
+    <configBuildOptions xsi:type="hwlink:LinkOptions" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="Filter2DKernel" projectName="convolution_kernels">
+          <computeUnits name="Filter2DKernel_1" slr="">
+            <args name="coeffs" master="true" memory=""/>
+            <args name="factor"/>
+            <args name="bias"/>
+            <args name="width"/>
+            <args name="height"/>
+            <args name="stride"/>
+            <args name="src" master="true" memory=""/>
+            <args name="dst" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="Filter2DKernel" projectName="convolution_kernels">
+          <computeUnits name="Filter2DKernel_1" slr="">
+            <args name="coeffs" master="true" memory=""/>
+            <args name="factor"/>
+            <args name="bias"/>
+            <args name="width"/>
+            <args name="height"/>
+            <args name="stride"/>
+            <args name="src" master="true" memory=""/>
+            <args name="dst" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.ide.accel.config.hwlink.hw.639563668">
+    <configBuildOptions xsi:type="hwlink:LinkOptions" target="hw">
+      <binaryContainers name="binary_container_1">
+        <kernels name="Filter2DKernel" projectName="convolution_kernels">
+          <computeUnits name="Filter2DKernel_1" slr="">
+            <args name="coeffs" master="true" memory=""/>
+            <args name="factor"/>
+            <args name="bias"/>
+            <args name="width"/>
+            <args name="height"/>
+            <args name="stride"/>
+            <args name="src" master="true" memory=""/>
+            <args name="dst" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+  </configuration>
+</hwlink:HwLinkProject>
