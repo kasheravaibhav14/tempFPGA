@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vitis Analyzer v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# 
+# Start of session at: Wed Nov 24 10:16:01 2021
+# Process ID: 8436
+# Current directory: /home/ec2-user/workspace1/convolution/Hardware/SystemDebugger_convolution_system_convolution
+# Command line: vitis_analyzer /home/ec2-user/workspace1/convolution/Hardware/SystemDebugger_convolution_system_convolution/xclbin.run_summary -listener
+# Log file: /home/ec2-user/workspace1/convolution/Hardware/SystemDebugger_convolution_system_convolution/vitis_analyzer.log
+# Journal file: /home/ec2-user/workspace1/convolution/Hardware/SystemDebugger_convolution_system_convolution/vitis_analyzer.jou
+#-----------------------------------------------------------
+start_gui
+create_project dummy
+exit
+INFO: [Common 17-206] Exiting vitis_analyzer at Wed Nov 24 10:18:38 2021...

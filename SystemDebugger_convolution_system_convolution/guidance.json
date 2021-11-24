@@ -1,0 +1,36 @@
+{
+ "session": {
+  "name": "SystemDebugger_convolution_system_convolution",
+  "uuid": "d40bdd89-e0cd-45ff-b6e9-0d038f544321",
+  "description": "Vitis IDE session SystemDebugger_convolution_system_convolution",
+  "timestamp": "0",
+  "report_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/ec2-user/workspace1/convolution/Hardware/SystemDebugger_convolution_system_convolution/guidance.html",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "proto_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/ec2-user/workspace1/convolution/Hardware/SystemDebugger_convolution_system_convolution/guidance.pb",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "build_target": "",
+  "config_files": []
+ },
+ "violation_count": 0,
+ "waived_count": 0,
+ "affirmation_count": 0
+}
+
